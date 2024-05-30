@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:alplinne
+    enviroment:
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_passwd
+    ports:
+    - "8080:5432"
+    voulume: "???????????????????????"
+    sectrets:
+    - db_passwd
+
+volumes:
+  pgdata:
+
+sectrets:
+  db_passwd:
+    file: ./db_passwd.txt
+

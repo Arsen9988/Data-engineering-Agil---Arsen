@@ -1,0 +1,18 @@
+from flask import Flask, send_from_directory
+
+app = Flask(__name__, template_folder='/')
+
+
+@app.route('/')
+def serve_html():
+    return send_from_directory('.', 'aa.html')
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8070)
+    
+    
+    
+    
+
+    
+    
